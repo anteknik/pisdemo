@@ -15,9 +15,10 @@ import net.pis.demo.anton.entity.Komentar;
 public class DemoJpaApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext app = SpringApplication.run(DemoJpaApplication.class, args);
+		//ApplicationContext app = 
+				SpringApplication.run(DemoJpaApplication.class, args);
 		
-		Berita b = new Berita();
+		/*Berita b = new Berita();
         b.setJudul("Ridho Rhoma Ditangkap BNN");
         b.setIsi("Ridho Rhoma Menyesal Pakai Narkoba");
         b.setWaktuPublikasi(new Date());
@@ -32,6 +33,6 @@ public class DemoJpaApplication {
         
         b.getDaftarKomentar().add(k);
         BeritaDao bd = app.getBean(BeritaDao.class);
-        bd.save(b);
+        bd.save(b);*/
 	}
 }
