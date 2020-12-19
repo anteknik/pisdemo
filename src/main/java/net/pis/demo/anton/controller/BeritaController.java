@@ -61,7 +61,7 @@ public class BeritaController {
     @ResponseStatus(HttpStatus.OK)
     @Transactional(readOnly = false)
     public void update(@PathVariable("id") Integer id, @RequestBody @Valid Berita p) {
-        if (!beritaDao.exists(id)) {
+        if (!beritaDao.existsById(id)) {
             throw new DataNotFoundException("tidak ada berita with the specified id");
         }
         p.setId(id);
@@ -72,10 +72,10 @@ public class BeritaController {
     @ResponseStatus(HttpStatus.OK)
     @Transactional(readOnly = false)
     public void delete(@PathVariable("id") Integer id) {
-        if (!beritaDao.exists(id)) {
+        if (!beritaDao.existsById(id)) {
             throw new DataNotFoundException("No data with the specified id");
         }
-        beritaDao.delete(id);
+        beritaDao.deleteById(id);
 }
 
 }
